@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQL_Injection_Playground"
         mc:Ignorable="d"
-        Title="SQL Injection Playground | Version 1.5.3.8 | Made by Schecher_1" 
+        Title="SQL Injection Playground | Version 1.5.3.9 | Made by Schecher_1" 
         Height="450" Width="800"
         MinHeight="480" MinWidth="700"
         Loaded="Window_Loaded"
