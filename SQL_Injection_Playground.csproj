@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resource\MySQL_Logo.ico</ApplicationIcon>
+    <AssemblyName>SQL Injection Playground</AssemblyName>
+    <DebugType>embedded</DebugType>
+    <Version>1.5.1.7</Version>
+    <Company>GermanNightmare</Company>
+    <Authors>Schecher_1</Authors>
+    <Description>With this program you can learn about SQL Injection</Description>
+    <Copyright>Copyright 2022</Copyright>
+    <IsPublishable>True</IsPublishable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resource\MySQL_Logo.ico" />
+    <Resource Include="Resource\Key.png" />
+    <Resource Include="Resource\User.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.29" />
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.1" />
+  </ItemGroup>
+
+</Project>
