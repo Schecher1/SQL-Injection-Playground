@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQL_Injection_Playground"
         mc:Ignorable="d"
-        Title="SQL Injection Playground | Version 1.5.1.7 | Made by Schecher_1" 
+        Title="SQL Injection Playground | Version 1.5.3.7 | Made by Schecher_1" 
         Height="450" Width="800"
         MinHeight="480" MinWidth="700"
         Loaded="Window_Loaded"
@@ -13,35 +13,35 @@
         Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
 
     <Grid>
-        <GroupBox Header="Einstellungen" BorderBrush="Black" FontSize="17" HorizontalAlignment="Left" Width="250" Margin="0,0,0,70">
+        <GroupBox Header="Settings" BorderBrush="Black" FontSize="17" HorizontalAlignment="Left" Width="250" Margin="0,0,0,70">
             <ScrollViewer  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
-                    <GroupBox Header="Datenbank Option" BorderBrush="Black" BorderThickness="1,1,1,1" Foreground="Black" >
+                    <GroupBox Header="Database Option" BorderBrush="Black" BorderThickness="1,1,1,1" Foreground="Black" >
                         <StackPanel Orientation="Vertical">
                             <RadioButton x:Name="Rb_NonEF" Content="Raw-Query" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_DatabaseType_Checked" IsEnabled="False"/>
                             <RadioButton x:Name="Rb_EF" Content="Entitiy Framework" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_DatabaseType_Checked" IsEnabled="False"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Header="Passwort Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
+                    <GroupBox Header="Password Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
                         <StackPanel Orientation="Vertical">
-                            <RadioButton x:Name="Rb_Password_Plain" Content="Passwort als Klartext" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_PasswordType_Checked" IsEnabled="False"/>
-                            <RadioButton x:Name="Rb_Password_Hash" Content="Passwort Hashen" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_PasswordType_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_Password_Plain" Content="Password as Plaintext" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_PasswordType_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_Password_Hash" Content="Password Hashen" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_PasswordType_Checked" IsEnabled="False"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Header="Ansicht Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
+                    <GroupBox Header="View Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
                         <StackPanel Orientation="Vertical">
-                            <RadioButton x:Name="Rb_View_Start" Content="Start Seite" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_View_Checked" IsEnabled="False"/>
-                            <RadioButton x:Name="Rb_View_Registration" Content="Registrierung Seite" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_View_Checked" IsEnabled="False"/>
-                            <RadioButton x:Name="Rb_View_Login" Content="Login Seite" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_View_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_View_Start" Content="Start View" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_View_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_View_Registration" Content="Registration View" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_View_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_View_Login" Content="Login View" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_View_Checked" IsEnabled="False"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox Header="Query Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
                         <StackPanel Orientation="Vertical">
-                            <RadioButton x:Name="Rb_Query_Show" Content="Query Anzeigen" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_Query_Checked" IsEnabled="False"/>
-                            <RadioButton x:Name="Rb_Query_Hidden" Content="Query Verbergen" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_Query_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_Query_Show" Content="Query Show" VerticalAlignment="Center" HorizontalAlignment="Left" IsChecked="True" Checked="Rb_Query_Checked" IsEnabled="False"/>
+                            <RadioButton x:Name="Rb_Query_Hidden" Content="Query Hidden" VerticalAlignment="Center" HorizontalAlignment="Left" Checked="Rb_Query_Checked" IsEnabled="False"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Header="Aufgaben Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
+                    <GroupBox Header="Task Option" BorderBrush="Black" Margin="0,5,0,0" VerticalAlignment="Top">
                         <StackPanel Orientation="Vertical">
                             <StackPanel.Resources>
                                 <Style TargetType="{x:Type Button}">
@@ -49,18 +49,18 @@
                                     <Setter Property="Background" Value="Transparent"/>
                                 </Style>
                             </StackPanel.Resources>
-                            <Button x:Name="Bttn_Task01" Content="Aufgabe 1" IsEnabled="False" Click="Bttn_Task_Click"/>
-                            <Button x:Name="Bttn_Task02" Content="Aufgabe 2" IsEnabled="False" Click="Bttn_Task_Click"/>
-                            <Button x:Name="Bttn_Task03" Content="Aufgabe 3" IsEnabled="False" Click="Bttn_Task_Click"/>
-                            <Button x:Name="Bttn_Task04" Content="Aufgabe 4" IsEnabled="False" Click="Bttn_Task_Click"/>
-                            <Button x:Name="Bttn_Task05" Content="Aufgabe 5" IsEnabled="False" Click="Bttn_Task_Click"/>
+                            <Button x:Name="Bttn_Task01" Content="Task 1" IsEnabled="False" Click="Bttn_Task_Click"/>
+                            <Button x:Name="Bttn_Task02" Content="Task 2" IsEnabled="False" Click="Bttn_Task_Click"/>
+                            <Button x:Name="Bttn_Task03" Content="Task 3" IsEnabled="False" Click="Bttn_Task_Click"/>
+                            <Button x:Name="Bttn_Task04" Content="Task 4" IsEnabled="False" Click="Bttn_Task_Click"/>
+                            <Button x:Name="Bttn_Task05" Content="Task 5" IsEnabled="False" Click="Bttn_Task_Click"/>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
             </ScrollViewer>
         </GroupBox>
         <Frame x:Name="Frame_PageMirror" Content="" HorizontalAlignment="Stretch" Margin="255,0,0,70" NavigationUIVisibility="Hidden"/>
-        <GroupBox Header="Derzeitige SQL-Query:" BorderBrush="Black" Margin="0,0,0,0" VerticalAlignment="Bottom" Height="67" FontSize="15">
+        <GroupBox Header="Current SQL query:" BorderBrush="Black" Margin="0,0,0,0" VerticalAlignment="Bottom" Height="67" FontSize="15">
             <TextBox x:Name="Msg_SqlQuery" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Stretch" Margin="0,0,0,0" IsReadOnly="True"/>
         </GroupBox>
     </Grid>
