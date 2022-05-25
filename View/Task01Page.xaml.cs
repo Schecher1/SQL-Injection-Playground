@@ -15,17 +15,17 @@
         private void CreateMessageWindow()
         {
             //this is hardcode, but it's ok for now
-            string title = $"Aufgabe Nummer 1 {Environment.NewLine}" +
-                                 $" (Schwiergikeits Level: ★ ☆ ☆ ☆ ☆)";
+            string title = $"Task number 1 {Environment.NewLine}" +
+                                 $" (Difficulty level: ★ ☆ ☆ ☆ ☆)";
 
-            string message = $"Deine Aufgabe ist: {Environment.NewLine}" +
-                                       $"Erstelle dir ein Account, dir ist es überlassen " +
-                                       $"was für ein Benutzername und Passwort der " +
-                                       $"haben soll. Die Aufgabe dient dafür damit du " +
-                                       $"das Programm kennenlernst! {Environment.NewLine}" +
-                                       $"Merke dir die Benutzerdaten! " +
-                                       $"Die gebrauchst du für die Zweite Aufgabe {Environment.NewLine}" +
-                                       $"Viel Erfolg!";
+            string message = $"Your task is: {Environment.NewLine}" +
+                                       $"Create an account for yourself, it's up to you " +
+                                       $"what username and password the " +
+                                       $"should have. The task is for you to " + 
+                                       $"get to know the program! {Environment.NewLine}" +
+                                       $"Remember the user data! " +
+                                       $"You will use them for the second task {Environment.NewLine}" +
+                                       $"Good luck!";
             
             MessageWindow MsgWindow = new MessageWindow(title, message);
             MsgWindow.Show();
@@ -54,7 +54,7 @@
             {
                 if (DbContextIntance.DbContext.User.FirstOrDefault(p => p.Username == Tb_Username.Text) != null)
                 {
-                    SendLog($"Der User {Tb_Username.Text} existiert bereits!");
+                    SendLog($"The user {Tb_Username.Text} already exists!");
                     return;
                 }
                 
@@ -68,7 +68,7 @@
             }
             catch
             {
-                SendLog($"Der User {Tb_Username.Text} wurde nicht erstellt!");
+                SendLog($"The user {Tb_Username.Text} was not created!");
             }
             finally
             {

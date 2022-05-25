@@ -42,14 +42,14 @@
                 var user = DbContextIntance.DbContext.User.FirstOrDefault(u => u.Username == Tb_Username.Text && u.Password == password);
 
                 if (user == null)
-                    SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                    SendLog($"The specified user data is incorrect! You are not logged in!");
                 else
-                    SendLog($"Der User {Tb_Username.Text} wurde gefunden, du bist jetzt Angemeldet!");
+                    SendLog($"The user {Tb_Username.Text} has been found, you are now Logged in!");
 
             }
             catch
             {
-                SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                SendLog($"The specified user data is incorrect! You are not logged in!");
             }
             finally
             {
@@ -67,15 +67,15 @@
                 object user = DbContext_Raw.cmd.ExecuteScalar();
 
                 if (user == null)
-                    SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                    SendLog($"The specified user data is incorrect! You are not logged in!");
                 else
-                    SendLog($"Der User {Tb_Username.Text} wurde gefunden, du bist jetzt Angemeldet!");
+                    SendLog($"The user {Tb_Username.Text} has been found, you are now Logged in!");
 
 
             }
             catch
             {
-                SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                SendLog($"The specified user data is incorrect! You are not logged in!");
             }
             finally
             {

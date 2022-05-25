@@ -38,7 +38,7 @@
             {
                 if (DbContextIntance.DbContext.User.FirstOrDefault(p => p.Username == Tb_Username.Text) != null)
                 {
-                    SendLog($"Der User {Tb_Username.Text} existiert bereits!");
+                    SendLog($"The user {Tb_Username.Text} already exists!");
                     return;
                 }
 
@@ -49,11 +49,11 @@
                 });
 
                 DbContextIntance.DbContext.SaveChanges();
-                SendLog($"Der User {Tb_Username.Text} wurde erstellt!");
+                SendLog($"The user {Tb_Username.Text} has been created!");
             }
             catch
             {
-                SendLog($"Der User {Tb_Username.Text} wurde nicht erstellt!");
+                SendLog($"The user {Tb_Username.Text} was not created!");
             }
             finally
             {
@@ -68,7 +68,7 @@
             {
                 if (DbContextIntance.DbContext.User.FirstOrDefault(p => p.Username == Tb_Username.Text) != null)
                 {
-                    SendLog($"Der User {Tb_Username.Text} existiert bereits!");
+                    SendLog($"The user {Tb_Username.Text} already exists!");
                     return;
                 }
 
@@ -77,11 +77,11 @@
                 DbContext_Raw.cmd.CommandText = $"INSERT INTO sqlinjection.user (`Username`, `Password`) VALUES ('{Tb_Username.Text}', '{password}');";
                 DbContext_Raw.cmd.ExecuteNonQuery();
 
-                SendLog($"Der User {Tb_Username.Text} wurde erstellt!");
+                SendLog($"The user {Tb_Username.Text} has been created!");
             }
             catch
             {
-                SendLog($"Der User {Tb_Username.Text} wurde nicht erstellt!");
+                SendLog($"The user {Tb_Username.Text} was not created!");
             }
             finally
             {

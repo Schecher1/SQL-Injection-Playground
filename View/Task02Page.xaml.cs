@@ -15,14 +15,14 @@
         private void CreateMessageWindow()
         {
             //this is hardcode, but it's ok for now
-            string title = $"Aufgabe Nummer 2 {Environment.NewLine}" +
-                                 $" (Schwiergikeits Level: ★ ☆ ☆ ☆ ☆)";
+            string title = $"Task number 2 {Environment.NewLine}" +
+                                 $" (Difficulty level: ★ ☆ ☆ ☆ ☆)";
 
-            string message = $"Deine Aufgabe ist: {Environment.NewLine}" +
-                                       $"Melde dich mit deinem Account an, dass du vorhin erstellt hast. " +
-                                       $"Die Aufgabe dient dafür damit du " +
-                                       $"das Programm kennenlernst! {Environment.NewLine}" +
-                                       $"Viel Erfolg!";
+            string message = $"Your task is: {Environment.NewLine}" +
+                                       $"Log in with your account that you created earlier. " +
+                                       $"The task is for you to " +
+                                       $"get to know the program! {Environment.NewLine}" +
+                                       $"Good luck!";
 
             MessageWindow MsgWindow = new MessageWindow(title, message);
             MsgWindow.Show();
@@ -54,7 +54,7 @@
                 object user = DbContext_Raw.cmd.ExecuteScalar();
 
                 if (user == null)
-                    SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                    SendLog($"The specified user data is incorrect! You are not logged in!");
                 else
                 {
                     //The Task is finished
@@ -64,7 +64,7 @@
             }
             catch
             {
-                SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                SendLog($"The specified user data is incorrect! You are not logged in!");
             }
             finally
             {

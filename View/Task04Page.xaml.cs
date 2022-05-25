@@ -15,14 +15,14 @@
         private void CreateMessageWindow()
         {
             //this is hardcode, but it's ok for now
-            string title = $"Aufgabe Nummer 4 {Environment.NewLine}" +
-                                 $" (Schwiergikeits Level: ★ ★ ★ ★ ☆)";
+            string title = $"Task number 4 {Environment.NewLine}" +
+                                 $" (Difficulty level: ★ ★ ★ ★ ☆)";
 
-            string message = $"Deine Aufgabe ist: {Environment.NewLine}" +
-                                       $"Versuche die Datenbank \"sqlinjection\" zu löschen! {Environment.NewLine}" +
-                                       $"Tipp: Weißt du überhaupt wie man eine Datenbank löscht? Nein? Finde es erst heraus! {Environment.NewLine}" +
-                                       $"Keine Sorge diese Datenbank existiert schon, du musst die nicht erstellen. {Environment.NewLine}" +
-                                       $"Viel Erfolg!";
+            string message = $"Your task is: {Environment.NewLine}" +
+                                       $"Try to delete the database \"sqlinjection\"! {Environment.NewLine}" +
+                                       $"Hint: Do you even know how to delete a database? No? Find out first! {Environment.NewLine}" +
+                                       $"Don't worry this database already exists, you don't need to create it. {Environment.NewLine}" +
+                                       $"Good luck!";
 
             MessageWindow MsgWindow = new MessageWindow(title, message);
             MsgWindow.Show();
@@ -54,13 +54,13 @@
                 object user = DbContext_Raw.cmd.ExecuteScalar();
 
                 if (user == null)
-                    SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                    SendLog($"The specified user data is incorrect! You are not logged in!");
                 else
-                    SendLog($"Der User {Tb_Username.Text} wurde gefunden, du bist jetzt Angemeldet!");
+                    SendLog($"The user {Tb_Username.Text} has been found, you are now Logged in!");
             }
             catch
             {
-                SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                SendLog($"The specified user data is incorrect! You are not logged in!");
 
                 DbContext_Raw.cmd.CommandText = $"SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'sqlinjection';";
                 object table = DbContext_Raw.cmd.ExecuteScalar();

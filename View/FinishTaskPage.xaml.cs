@@ -12,12 +12,12 @@
         {
             //this is hardcode, but it's ok for now
             if (taskNumber < 5)
-                Tb_Message.Text = $"Du hast erfolgreich, das Level {taskNumber} absolviert! {Environment.NewLine}" +
-                                $"Level {taskNumber + 1} ist jetzt Freigeschaltet!";
+                Tb_Message.Text = $"You have successfully completed the {taskNumber} level! {Environment.NewLine}" +
+                                $"Level {taskNumber + 1} is now unlocked!";
             else
-                Tb_Message.Text = $"Du hast erfolgreich, das Level {taskNumber} absolviert! {Environment.NewLine}" +
-                                $"Herzlichen Glückwunsch, du hast alle Level absolviert! {Environment.NewLine}" +
-                                $"Du kannst dich jetzt Sql-Injection Profi nennen! :D";
+                Tb_Message.Text = $"You have successfully completed the {taskNumber} level! {Environment.NewLine}" +
+                                $"Congratulations, you have completed all levels! {Environment.NewLine}" +
+                                $"You can call yourself Sql-Injection pro now! :D";
         }
     }
 }

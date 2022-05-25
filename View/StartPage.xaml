@@ -10,8 +10,8 @@
       Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     
     <Grid>
-        <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" Foreground="Black" Margin="55,50,55,0" Text="Bitte Starte dein XAMPP und das dazugehöriger &quot;MySQL&quot; (zu finden in der 2ten Spalte)!" TextAlignment="Center"/>
-        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" Foreground="Black" Margin="55,180,55,0" Text="Wenn dies geschehen ist, dann drücke bitte auf &quot;Login&quot;." TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" Foreground="Black" Margin="55,50,55,0" Text="Please start your XAMPP and the associated &quot;MySQL&quot; (to be found in the 2nd column)!" TextAlignment="Center"/>
+        <TextBlock TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" Foreground="Black" Margin="55,180,55,0" Text="When this is done, please press &quot;Login&quot;." TextAlignment="Center"/>
         <Button x:Name="Bttn_DatabaseLogin" Content="Login" Margin="100,0,100,50" FontSize="30" VerticalAlignment="Bottom" Height="44" Click="Bttn_DatabaseLogin_Click"/>
     </Grid>
 </Page>

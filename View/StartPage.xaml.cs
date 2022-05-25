@@ -19,27 +19,27 @@
                 //Create the Database, if it not exist
                 if (!DatabaseEF.Database.EnsureCreated() && !DatabaseEF.Database.CanConnect())
                 {
-                    MessageBox.Show("Die Datenbank konnte nicht erstellt werden!");
+                    MessageBox.Show("The database could not be created!");
                     return;
                 }
             }
             catch
             {
-                MessageBox.Show("Die Datenbank ist nicht erreichbar, bitte stelle sicher, dass sie gestartet ist in XAMPP!");
+                MessageBox.Show("The database is unreachable, please make sure it is started in XAMPP!");
                 return;
             }
 
             //try to connect the Database via EF
             if (!DatabaseEF.Database.CanConnect())
             {
-                MessageBox.Show("Login fehlgeschlagen von EF");
+                MessageBox.Show("Login failed from EF");
                 return;
             }
 
             //try to connect the Database via MySqlData
             if (!DbContext_Raw.DbConnect())
             {
-                MessageBox.Show("Login fehlgeschlagen von MySqlData");
+                MessageBox.Show("Login failed from MySqlData");
                 return;
             }
 

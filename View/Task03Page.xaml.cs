@@ -28,13 +28,13 @@
         private void CreateMessageWindow()
         {
             //this is hardcode, but it's ok for now
-            string title = $"Aufgabe Nummer 3 {Environment.NewLine}" +
-                                 $" (Schwiergikeits Level: ★ ★ ☆ ☆ ☆)";
+            string title = $"Task number 3 {Environment.NewLine}" +
+                                 $" (Difficulty level: ★ ★ ☆ ☆ ☆)";
 
-            string message = $"Deine Aufgabe ist: {Environment.NewLine}" +
-                                       $"Melde dich mit dem Account von \"Tom\" an, ohne das Passwort zu wissen! {Environment.NewLine}" +
-                                       $"Keine Sorge dieser Account existiert in der Datenbank, du musst ihn nicht erstellen. {Environment.NewLine}" +
-                                       $"Viel Erfolg!";
+            string message = $"Your task is: {Environment.NewLine}" +
+                                       $"Log in with the account of \"Tom\" without knowing the password! {Environment.NewLine}" +
+                                       $"Don't worry this account exists in the database, you don't have to create it. {Environment.NewLine}" +
+                                       $"Good luck!";
 
             MessageWindow MsgWindow = new MessageWindow(title, message);
             MsgWindow.Show();
@@ -67,12 +67,12 @@
                 
                 if (!Tb_Username.Text.ToLower().Contains("tom"))
                 {
-                    SendLog($"Das ist nicht der Benutzer \"Tom\"!");
+                    SendLog($"This is not the user \"Tom\"!");
                 }
                 else
                 {
                     if (user == null)
-                        SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                        SendLog($"The specified user data is incorrect! You are not logged in!");
                     else
                     {
                         //The Task is finished
@@ -84,7 +84,7 @@
             }
             catch
             {
-                SendLog($"Die angegebenen Benutzer Daten sind fehlerhaft! Du bist nicht Angemeldet!");
+                SendLog($"The specified user data is incorrect! You are not logged in!");
             }
             finally
             {

@@ -113,28 +113,28 @@
                     if (EnvironmentVariable.IsTask01Completed)
                         Frame_PageMirror.Content = new Task02Page();
                     else
-                        MessageBox.Show("Aufgabe 1 ist noch nicht abgeschlossen!");
+                        MessageBox.Show("Task 1 is not yet completed!");
                     break;
                     
                 case "Bttn_Task03":
                     if (EnvironmentVariable.IsTask02Completed)
                         Frame_PageMirror.Content = new Task03Page();
                     else
-                        MessageBox.Show("Aufgabe 2 ist noch nicht abgeschlossen!");
+                        MessageBox.Show("Task 2 is not yet completed!");
                     break;
                     
                 case "Bttn_Task04":
                     if (EnvironmentVariable.IsTask03Completed)
                         Frame_PageMirror.Content = new Task04Page();
                     else
-                        MessageBox.Show("Aufgabe 3 ist noch nicht abgeschlossen!");
+                        MessageBox.Show("Task 3 is not yet completed!");
                     break;
                     
                 case "Bttn_Task05":
                     if (EnvironmentVariable.IsTask04Completed)
                         Frame_PageMirror.Content = new Task05Page();
                     else
-                        MessageBox.Show("Aufgabe 4 ist noch nicht abgeschlossen!");
+                        MessageBox.Show("Task 4 is not yet completed!");
                     break;
             }
             ClearSqlQuery();
